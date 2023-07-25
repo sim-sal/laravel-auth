@@ -3,6 +3,14 @@
 @section('content')
 
     <div class="container text-center pt-5">
+        @auth
+            <span>Hello, <strong>{{Auth::user() -> name}}</strong></span>
+        @endauth
+
+        @guest
+            <span>Log in!</span>
+        @endguest
+
         <h1>PROJECT LIST</h1>
 
         <ul class="list-unstyled">
