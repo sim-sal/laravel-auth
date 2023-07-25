@@ -8,7 +8,9 @@
         <ul class="list-unstyled">
             @foreach ($projects as $project)
                 <li class="pt-2">
-                    <strong>{{$project -> name}}</strong>
+                    <a href="{{route('project.show', $project -> id)}}">
+                        <strong>{{$project -> name}}</strong>
+                    </a>
                 </li>
             @endforeach
         </ul>

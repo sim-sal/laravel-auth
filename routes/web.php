@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GuestController;
+use App\Http\Controllers\LoggedController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [GuestController::class, 'index'])
     ->name('project.index');
+
+Route::get('/show{id}', [LoggedController::class, 'show'])
+    ->name('project.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
