@@ -24,6 +24,7 @@ Route::get('/', [GuestController::class, 'index'])
     ->name('project.index');
 
 Route::get('/show{id}', [LoggedController::class, 'show'])
+    ->middleware(['auth', 'verified'])
     ->name('project.show');
 
 Route::get('/dashboard', function () {
