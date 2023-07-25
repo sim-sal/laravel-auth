@@ -16,7 +16,7 @@
         <ul class="list-unstyled">
             @foreach ($projects as $project)
                 <li class="pt-2">
-                    <a href="{{route('project.show', $project -> id)}}">
+                    <a class="text-capitalize" href="{{route('project.show', $project -> id)}}">
                         <strong>{{$project -> name}}</strong>
                     </a>
                 </li>
